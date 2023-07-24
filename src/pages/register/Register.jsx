@@ -26,8 +26,9 @@ export default function Register() {
     setUsername(usernameRef.current.value);
     try {
       await axios.post("auth/register", { email,username, password });
+      console.log("here")
       history.push("/login");
-    } catch (err) {}
+    } catch (err) {console.log(err)}
   };
   return (
     <div className="register">

@@ -15,8 +15,7 @@ import { AuthContext } from "./authContext/AuthContext";
 const App = () => {
   const { user } = useContext(AuthContext);
   // const user = true;
-
-  //"proxy":"http://localhost:8800/api/"
+  // "proxy":"https://netflixbe.onrender.com/api/"
   return (
     <Router>
       <Switch>
