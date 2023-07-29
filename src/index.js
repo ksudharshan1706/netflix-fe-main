@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { AuthContextProvider } from "./authContext/AuthContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
-axios.defaults.baseURL = "http://localhost:8800/api/";
+axios.defaults.baseURL = "https://netflixbe.onrender.com/api/";
 root.render(
   <BrowserRouter>
     <AuthContextProvider>
