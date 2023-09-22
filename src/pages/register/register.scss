@@ -29,6 +29,7 @@
           padding: 5px 15px;
           font-size: 16px;
           font-weight: 500;
+          z-index: 1000;
           cursor: pointer;
         }
       }
@@ -84,6 +85,27 @@
             font-size: 22px;
             cursor: pointer;
         }
+        
       }
+      .haveaccount{
+        margin: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .loginButton {
+          background-color: red;
+          border: none;
+          color: white;
+          border-radius: 5px;
+          padding: 5px 15px;
+          font-size: 16px;
+          font-weight: 500;
+          z-index: 1000;
+          cursor: pointer;
+          margin-left:20px;
+        }
+      }
+     
     }
   }

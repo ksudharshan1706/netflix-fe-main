@@ -73,7 +73,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./register.scss";
 
 export default function Register() {
@@ -81,11 +81,12 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const history = useHistory();
-
   const emailRef = useRef();
   const passwordRef = useRef();
   const usernameRef = useRef();
-
+const login = ()=>{
+  history.push("/login");
+}
   const handleStart = () => {
     setEmail(emailRef.current.value);
   };
@@ -107,7 +108,11 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton">Sign In</button>
+          {/* <button className="loginButton" onClick={login}>Sign In</button> */}
+          {/* <Link to="/login">
+          <button className="loginButton" onClick={login}>Sign In</button>
+          </Link> */}
+          
         </div>
       </div>
       <div className="container">
@@ -117,12 +122,20 @@ export default function Register() {
           Ready to watch? Enter your email to create or restart your membership.
         </p>
         {!email ? (
+          <>
           <div className="input">
             <input type="email" placeholder="email address" ref={emailRef} />
             <button className="registerButton" onClick={handleStart}>
               Get Started
             </button>
           </div>
+          <div className="haveaccount">
+            <p>Already Have an Account?</p>
+          <Link to="/login">
+          <button className="loginButton" onClick={login}>Sign In</button>
+          </Link>
+          </div>
+          </>
         ) : (
           <form className="input">
             <input type="username" placeholder="username" ref={usernameRef} />
